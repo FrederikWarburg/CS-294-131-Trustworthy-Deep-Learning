@@ -164,8 +164,8 @@ class Trainer():
             if save_model:
                 # Save models
                 name = 'mnist_model'
-                torch.save(self.G.state_dict(), './gen_' + name + '_epoch_' + epoch + '.pt')
-                torch.save(self.D.state_dict(), './dis_' + name + '_epoch_' + epoch + '.pt')
+                torch.save(self.G.state_dict(), './gen_' + name + '_epoch_' + str(epoch) + '.pt')
+                torch.save(self.D.state_dict(), './dis_' + name + '_epoch_' + str(epoch) + '.pt')
 
         if save_training_gif:
             imageio.mimsave('./training_{}_epochs.gif'.format(epochs),
