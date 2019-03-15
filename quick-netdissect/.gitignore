@@ -1,0 +1,8 @@
+/dist
+/build
+/netdissect.egg-info
+*.pyc
+dataset
+dissect
+__pycache__
+
