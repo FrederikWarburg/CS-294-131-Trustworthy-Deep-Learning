@@ -2,6 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable
+from torchvision.utils import make_grid
+from torch.autograd import Variable
+import numpy as np
 
 
 class Generator(nn.Module):
@@ -42,7 +45,6 @@ class Generator(nn.Module):
 
     def sample_latent(self, num_samples):
         return torch.randn((num_samples, self.latent_dim))
-
 
 class Discriminator(nn.Module):
     def __init__(self, img_size, dim):

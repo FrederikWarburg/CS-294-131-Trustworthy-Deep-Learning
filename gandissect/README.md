@@ -83,6 +83,13 @@ python -m netdissect \
    --size 1000
 ```
 
+python -m netdissect \
+ --gan \
+ --model "netdissect.proggan.from_pth_file('../wgan-gp/gen_mnist_model_epoch_0.pt')" \
+ --outdir "dissect/mnist" \
+ --layer layer 1 \
+ --size 10
+
 The result is a static HTML page at `dissect/livingroom/dissect.html`, and
 a JSON file of metrics at `dissect/livingroom/dissect.json`.
 

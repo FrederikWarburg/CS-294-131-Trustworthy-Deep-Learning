@@ -7,6 +7,8 @@ from torch.autograd import Variable
 from torch.autograd import grad as torch_grad
 from IPython import display
 import matplotlib.pyplot as plt
+import os
+from datetime import date
 
 class Trainer():
     def __init__(self, generator, discriminator, gen_optimizer, dis_optimizer,
@@ -147,6 +149,16 @@ class Trainer():
                 fixed_latents = fixed_latents.cuda()
             training_progress_images = []
 
+        if not os.path.isdir("mnist_models/"):
+            os.mkdir('mnist_models/')
+
+        today = str(date.today())
+        if not os.path.isdir("mnist_models/" + today):
+            os.mkdir('mnist_models/' + today)
+        else:
+            print("WARNING - we will overwrite folder named: ", today)
+
+
         for epoch in range(epochs):
             print("\nEpoch {}".format(epoch + 1))
 
@@ -163,9 +175,10 @@ class Trainer():
 
             if save_model:
                 # Save models
+
                 name = 'mnist_model'
-                torch.save(self.G.state_dict(), './gen_' + name + '_epoch_' + str(epoch) + '.pt')
-                torch.save(self.D.state_dict(), './dis_' + name + '_epoch_' + str(epoch) + '.pt')
+                torch.save(self.G, 'mnist_models/' + today + '/gen_' + name + '_epoch_' + str(epoch) + '.pt')
+                torch.save(self.D, 'mnist_models/' + today + '/dis_' + name + '_epoch_' + str(epoch) + '.pt')
 
         if save_training_gif:
             imageio.mimsave('./training_{}_epochs.gif'.format(epochs),
