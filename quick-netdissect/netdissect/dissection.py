@@ -61,23 +61,36 @@ def dissect(outdir, model, dataset,
     and metadata into outdir.
     '''
     assert not model.training, 'Run model.eval() before dissection'
+
+    print("we are startingg!")
+
     if netname is None:
         netname = type(model).__name__
     with torch.no_grad():
         device = next(model.parameters()).device
+        print(" segloader!!!")
         segloader = torch.utils.data.DataLoader(dataset,
                 batch_size=batch_size, num_workers=num_workers,
                 pin_memory=(device.type == 'cuda'))
-        quantiles, topk = collect_quantiles_and_topk(model, segloader,
-                recover_image=recover_image, k=examples_per_unit)
+
+        print("collect stuff")
+        quantiles, topk = collect_quantiles_and_topk(model, segloader, recover_image=recover_image, k=examples_per_unit)
+
+        print("levels")
         levels = {k: qc.quantiles([1.0 - quantile_threshold])[:,0]
                 for k, qc in quantiles.items()}
+
         quantiledata = (topk, quantiles, levels, quantile_threshold)
+
         if make_images:
+            print("make image to", outdir)
             generate_images(outdir, model, dataset, topk, levels, recover_image,
                     row_length=examples_per_unit, batch_size=batch_size,
                     single_images=make_single_images,
                     num_workers=num_workers)
+        else:
+            print("don't make image to", outdir)
+
         if make_labels:
             if hasattr(recover_image, 'get_label_and_category_names'):
                 labelnames, catnames = (
@@ -97,6 +110,8 @@ def dissect(outdir, model, dataset,
                     iou_threshold)
         else:
             labeldata = None
+
+        print("soon there will be a report")
         if make_report:
             generate_report(outdir,
                     quantiledata=quantiledata,
