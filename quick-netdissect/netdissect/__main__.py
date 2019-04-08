@@ -159,21 +159,16 @@ def main():
     perturbation = numpy.load(args.perturbation) if args.perturbation else None
 
     # Load broden dataset
-    ds = try_to_load_broden(args.segments, args.imgsize, args.broden_version, perturbation, args.download, args.size)
-
+    ds = try_to_load_broden(args.segments, args.imgsize,
+            args.broden_version, perturbation, args.download, args.size)
     if ds is None:
-        ds = try_to_load_multiseg(args.segments, args.imgsize,perturbation, args.size)
-
+        ds = try_to_load_multiseg(args.segments, args.imgsize,
+                perturbation, args.size)
     if ds is None:
         print_progress('No segmentation dataset found in %s' % args.segements)
         print_progress('use --download to download Broden.')
         sys.exit(1)
 
-    print(ds.labels)
-    print(ds.categories)
-    print(ds.label_category)
-
-    """
     # Run dissect
     dissect(args.outdir, model, ds,
             recover_image=ReverseNormalize(IMAGE_MEAN, IMAGE_STDEV),
@@ -187,7 +182,6 @@ def main():
             batch_size=args.batch_size,
             num_workers=args.num_workers,
             settings=vars(args))
-    """
 
 class AddPerturbation(object):
     def __init__(self, perturbation):
