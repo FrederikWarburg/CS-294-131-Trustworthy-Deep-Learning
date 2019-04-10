@@ -631,7 +631,7 @@ def retain_layers(model, layer_names, add_scale_offset=True):
 
 def broden_label_and_category_names(dataset):
     catnames = dataset.categories
-    label_and_cat_names = [(readable(label),
+    label_and_cat_names = [(readable(str(label)),
         catnames[dataset.label_category[i]])
             for i, label in enumerate(dataset.labels)]
     return label_and_cat_names, catnames
