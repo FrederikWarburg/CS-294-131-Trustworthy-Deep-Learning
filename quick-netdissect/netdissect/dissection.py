@@ -386,11 +386,10 @@ def generate_images(outdir, model, dataset, topk, levels,
                 Image.fromarray(strip[:,:-gap_pixels,:]).save(filename,
                         optimize=True, quality=80)
                 if single_images:
-                    print("single_ images")
-                    print(strip)
+
                     single_filename = os.path.join(outdir, safe_dir_name(layer),
                         'image', 's-%d-%s' % (unit, suffix))
-                    print(single_filename)
+
                     Image.fromarray(strip[:,:strip.shape[1] // row_length
                         - gap_pixels,:]).save(single_filename,
                                 optimize=True, quality=80)
