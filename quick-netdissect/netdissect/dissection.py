@@ -71,7 +71,7 @@ def dissect(outdir, model, dataset,
         print(" segloader!!!")
         segloader = torch.utils.data.DataLoader(dataset,
                 batch_size=batch_size, num_workers=num_workers,
-                pin_memory=(device.type == 'cuda'))
+                pin_memory=(device.type == 'cuda'), sampler=  FixedSubsetSampler([0,1,2,3,4,5]))
 
         print("collect stuff")
         quantiles, topk = collect_quantiles_and_topk(model, segloader, recover_image=recover_image, k=examples_per_unit)
@@ -100,7 +100,7 @@ def dissect(outdir, model, dataset,
             label_category = [catnames.index(c) for l, c in labelnames]
             segloader = torch.utils.data.DataLoader(dataset,
                     batch_size=1, num_workers=num_workers,
-                    pin_memory=(device.type == 'cuda'))
+                    pin_memory=(device.type == 'cuda'), sampler=  FixedSubsetSampler([0,1,2,3,4,5]))
             lcs, ccs, ics = collect_bincounts(model, segloader, levels,
                     recover_image=recover_image)
             scores = {
@@ -300,7 +300,7 @@ def generate_images(outdir, model, dataset, topk, levels,
     segloader = torch.utils.data.DataLoader(dataset,
             batch_size=5, num_workers=num_workers,
             pin_memory=(device.type == 'cuda'),
-            sampler=needed_sample)
+            sampler=FixedSubsetSampler([0, 1, 2, 3, 4, 5]))
     vizgrid, maskgrid, origrid, seggrid = [{} for _ in range(4)]
     # Pass 2: populate vizgrid with visualizations of top units.
     for i, batch in enumerate(
