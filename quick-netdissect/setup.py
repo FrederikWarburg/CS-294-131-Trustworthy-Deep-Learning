@@ -26,7 +26,7 @@ setuptools.setup(
         "Pillow>=4.1.0",
         "scipy>=1.1.0",
         "torch>=0.4.1",
-        "torchvision>=0.2.1",
+        # "torchvision>=0.2.1",
         "tqdm>=4.23.4",
     ],
 )

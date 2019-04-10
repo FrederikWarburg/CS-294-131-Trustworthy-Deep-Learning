@@ -3,3 +3,12 @@ __pycache__/
 runs/
 data/
 .idea/
+
+MNIST_synthetic.h5
+colab_WGAN-GP_training.ipynb
+dis_mnist_model_epoch_200.pt
+gen_mnist_model_epoch_200.pt
+dissrct_MNIST.ipynb
+Train-GAN-MNIST.ipynb
+wgan-gp.ipynb
+
