@@ -62,60 +62,59 @@ def dissect(outdir, model, dataset,
     '''
     assert not model.training, 'Run model.eval() before dissection'
 
-    print("we are startingg!")
+
 
     if netname is None:
         netname = type(model).__name__
     with torch.no_grad():
         device = next(model.parameters()).device
 
-        print("PROGRESS: method dissect, after loading device")
+
         segloader = torch.utils.data.DataLoader(dataset,
                 batch_size=batch_size, num_workers=num_workers,
                 pin_memory=(device.type == 'cuda'), sampler=  FixedSubsetSampler([0,1,2,3,4,5]))
-        print("PROGRESS: method dissect, after loading segloader")
-        print("VERBOSE: segloader: {}".format(segloader))
+
+
 
         quantiles, topk = collect_quantiles_and_topk(model, segloader,
                 recover_image=recover_image, k=examples_per_unit)
-        print("PROGRESS: method dissect, after collect_quantiles_and_topk")
+
 
         levels = {k: qc.quantiles([1.0 - quantile_threshold])[:,0]
                 for k, qc in quantiles.items()}
-        print("VERBOSE: levels: {}".format(levels))
+
 
         quantiledata = (topk, quantiles, levels, quantile_threshold)
 
         if make_images:
 
-            print("VERBOSE: make_images: {}".format(make_images))
+
 
             generate_images(outdir, model, dataset, topk, levels, recover_image,
                     row_length=examples_per_unit, batch_size=batch_size,
                     single_images=make_single_images,
                     num_workers=num_workers)
-        else:
-            print("don't make image to", outdir)
+
 
         if make_labels:
-            print("VERBOSE: make_labels: {}".format(make_labels))
+
             if hasattr(recover_image, 'get_label_and_category_names'):
-                print("VERBOSE: hasattr")
+
                 labelnames, catnames = (
                         recover_image.get_label_and_category_names(dataset))
-                print("VERBOSE: labelnames: {}".format(labelnames))
-                print("VERBOSE: catnames: {}".format(catnames))
+
+
             else:
                 labelnames, catnames = broden_label_and_category_names(dataset)
-                print("VERBOSE: labelnames: {}".format(labelnames))
-                print("VERBOSE: catnames: {}".format(catnames))
+
+
             label_category = [catnames.index(c) for l, c in labelnames]
-            print("VERBOSE: label_category: {}".format(label_category))
+
             segloader = torch.utils.data.DataLoader(dataset,
                     batch_size=1, num_workers=num_workers,
                     pin_memory=(device.type == 'cuda'), sampler=  FixedSubsetSampler([0,1,2,3,4,5]))
 
-            print("PROGRESS: method dissect, after torch.utils.data.DataLoader")
+
 
             lcs, ccs, ics = collect_bincounts(model, segloader, levels,
                     recover_image=recover_image)
@@ -127,7 +126,7 @@ def dissect(outdir, model, dataset,
         else:
             labeldata = None
 
-        print("soon there will be a report")
+
         if make_report:
             generate_report(outdir,
                     quantiledata=quantiledata,
@@ -303,16 +302,16 @@ def generate_images(outdir, model, dataset, topk, levels,
     # Pass 1: needed_images lists all images that are topk for some unit.
     for layer in topk:
         topresult = topk[layer].result()[1].cpu()
-        print("VERBOSE: topresult: {}".format(topresult))
+
         for unit, row in enumerate(topresult):
-            print("VERBOSE: unit: {}".format(unit))
-            print("VERBOSE: row: {}".format(row))
+
+
             for rank, imgnum in enumerate(row[:row_length]):
-                print("VERBOSE: rank: {}".format(rank))
+
                 imgnum = imgnum.item()
-                print("VERBOSE: imgnum: {}".format(imgnum))
+
                 if imgnum not in needed_images:
-                    print("VERBOSE: if imgnum not in needed_images")
+
                     needed_images[imgnum] = []
                 needed_images[imgnum].append((layer, unit, rank))
     levels = {k: v.cpu().numpy() for k, v in levels.items()}
@@ -483,18 +482,27 @@ def collect_bincounts(model, segloader, levels, recover_image=None):
     # total_batch_categories = torch.zeros(
     #         labelcat.shape[1], dtype=torch.long, device=device)
     for i, batch in enumerate(progress(segloader, desc='Bincounts')):
+
         if hasattr(recover_image, 'recover_im_seg_bc_and_features'):
+
             im, seg, batch_label_counts, features, scale_offset_map = (
                     recover_image.recover_im_seg_bc_and_features(
                         batch, model))
             bc = batch_label_counts.cpu()
         else:
+
             bc = batch[2]
             im, seg, batch_label_counts = (d.to(device) for d in batch)
             model(im)
             features = model.retained
         # Accumulate bincounts and identify nonzeros
+
+
+
         label_counts += batch_label_counts[0]
+
+
+
         batch_labels = bc[0].nonzero()[:,0]
         batch_categories = labelcat[batch_labels].max(0)[0]
         for key, value in features.items():

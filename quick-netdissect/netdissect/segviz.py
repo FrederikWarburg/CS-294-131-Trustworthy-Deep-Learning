@@ -1,8 +1,7 @@
 import numpy, scipy
 import numpy as np
 def segment_visualization(seg, size):
-    print(type(seg), np.shape(seg), size)
-    print(seg.shape)
+g
     result = numpy.zeros((seg.shape[1] * seg.shape[2], 3), dtype=numpy.uint8)
     flatseg = seg.reshape(seg.shape[0], seg.shape[1] * seg.shape[2])
     bc = numpy.bincount(flatseg.flatten())
