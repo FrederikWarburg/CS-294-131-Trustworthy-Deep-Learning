@@ -68,11 +68,11 @@ def dissect(outdir, model, dataset,
         netname = type(model).__name__
     with torch.no_grad():
         device = next(model.parameters()).device
-<<<<<<< HEAD
+
         print("PROGRESS: method dissect, after loading device")
         segloader = torch.utils.data.DataLoader(dataset,
                 batch_size=batch_size, num_workers=num_workers,
-                pin_memory=(device.type == 'cuda'))
+                pin_memory=(device.type == 'cuda'), sampler=  FixedSubsetSampler([0,1,2,3,4,5]))
         print("PROGRESS: method dissect, after loading segloader")
         print("VERBOSE: segloader: {}".format(segloader))
 
@@ -83,28 +83,13 @@ def dissect(outdir, model, dataset,
         levels = {k: qc.quantiles([1.0 - quantile_threshold])[:,0]
                 for k, qc in quantiles.items()}
         print("VERBOSE: levels: {}".format(levels))
-=======
-        print(" segloader!!!")
-        segloader = torch.utils.data.DataLoader(dataset,
-                batch_size=batch_size, num_workers=num_workers,
-                pin_memory=(device.type == 'cuda'), sampler=  FixedSubsetSampler([0,1,2,3,4,5]))
 
-        print("collect stuff")
-        quantiles, topk = collect_quantiles_and_topk(model, segloader, recover_image=recover_image, k=examples_per_unit)
-
-        print("levels")
-        levels = {k: qc.quantiles([1.0 - quantile_threshold])[:,0]
-                for k, qc in quantiles.items()}
-
->>>>>>> 4aac6e072d8c979ac616b49204cff87319466336
         quantiledata = (topk, quantiles, levels, quantile_threshold)
 
         if make_images:
-<<<<<<< HEAD
+
             print("VERBOSE: make_images: {}".format(make_images))
-=======
-            print("make image to", outdir)
->>>>>>> 4aac6e072d8c979ac616b49204cff87319466336
+
             generate_images(outdir, model, dataset, topk, levels, recover_image,
                     row_length=examples_per_unit, batch_size=batch_size,
                     single_images=make_single_images,
@@ -128,12 +113,10 @@ def dissect(outdir, model, dataset,
             print("VERBOSE: label_category: {}".format(label_category))
             segloader = torch.utils.data.DataLoader(dataset,
                     batch_size=1, num_workers=num_workers,
-<<<<<<< HEAD
                     pin_memory=(device.type == 'cuda'), sampler=  FixedSubsetSampler([0,1,2,3,4,5]))
-=======
-                    pin_memory=(device.type == 'cuda'))
+
             print("PROGRESS: method dissect, after torch.utils.data.DataLoader")
->>>>>>> 48b6c627ed647b6b208018ad087189a95b7f8627
+
             lcs, ccs, ics = collect_bincounts(model, segloader, levels,
                     recover_image=recover_image)
             scores = {

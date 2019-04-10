@@ -1,126 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a906e66a-f7ad-4c14-8e3b-4707326d7a48" name="Default Changelist" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/CS-294-131-Trustworthy-Deep-Learning.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/MNIST_LUCY.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_0_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_100_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_10_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_110_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_120_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_130_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_140_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_150_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_160_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_170_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_180_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_190_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_200_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_20_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_210_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_220_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_230_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_240_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_250_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_260_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_270_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_280_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_290_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_300_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_30_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_310_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_320_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_330_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_340_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_350_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_360_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_370_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_380_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_390_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_400_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_40_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_410_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_420_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_430_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_440_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_450_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_460_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_50_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_60_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_70_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_80_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/_epoch_90_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_0_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_100_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_10_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_110_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_120_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_130_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_140_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_150_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_160_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_170_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_180_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_190_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_200_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_20_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_210_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_220_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_230_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_240_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_250_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_260_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_270_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_280_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_290_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_300_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_30_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_310_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_320_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_330_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_340_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_350_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_360_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_370_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_380_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_390_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_400_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_40_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_410_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_420_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_430_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_440_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_450_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_460_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_50_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_60_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_70_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_80_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/images/WGAN-GP/MNIST/hori_epoch_90_batch_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/dissect_MNIST.ipynb.orig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/quick-netdissect/netdissect/dissection.py.orig" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/Train-GAN-MNIST.ipynb" afterPath="$PROJECT_DIR$/Train-GAN-MNIST.ipynb" />
-      <change beforePath="$PROJECT_DIR$/dataset/processed/test.pt" afterPath="$PROJECT_DIR$/data/MNIST/processed/test.pt" />
-      <change beforePath="$PROJECT_DIR$/dataset/processed/training.pt" afterPath="$PROJECT_DIR$/data/MNIST/processed/training.pt" />
-      <change beforePath="$PROJECT_DIR$/dataset/raw/t10k-images-idx3-ubyte" afterPath="$PROJECT_DIR$/data/MNIST/raw/t10k-images-idx3-ubyte" />
-      <change beforePath="$PROJECT_DIR$/dataset/raw/t10k-labels-idx1-ubyte" afterPath="$PROJECT_DIR$/data/MNIST/raw/t10k-labels-idx1-ubyte" />
-      <change beforePath="$PROJECT_DIR$/dataset/raw/train-images-idx3-ubyte" afterPath="$PROJECT_DIR$/data/MNIST/raw/train-images-idx3-ubyte" />
-      <change beforePath="$PROJECT_DIR$/dataset/raw/train-labels-idx1-ubyte" afterPath="$PROJECT_DIR$/data/MNIST/raw/train-labels-idx1-ubyte" />
-      <change beforePath="$PROJECT_DIR$/dissect_MNIST.ipynb" afterPath="$PROJECT_DIR$/dissect_MNIST.ipynb" />
-      <change beforePath="$PROJECT_DIR$/quick-netdissect/netdissect/__main__.py" afterPath="$PROJECT_DIR$/quick-netdissect/netdissect/__main__.py" />
-      <change beforePath="$PROJECT_DIR$/quick-netdissect/netdissect/dissection.py" afterPath="$PROJECT_DIR$/quick-netdissect/netdissect/dissection.py" />
-      <change beforePath="$PROJECT_DIR$/quick-netdissect/setup.py" afterPath="$PROJECT_DIR$/quick-netdissect/setup.py" />
-      <change beforePath="$PROJECT_DIR$/wgan-gp/dataloaders.py" afterPath="$PROJECT_DIR$/dataloaders.py" />
-      <change beforePath="$PROJECT_DIR$/wgan-gp/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change beforePath="$PROJECT_DIR$/wgan-gp/models.py" afterPath="$PROJECT_DIR$/models.py" />
-      <change beforePath="$PROJECT_DIR$/wgan-gp/training.py" afterPath="$PROJECT_DIR$/training.py" />
-    </list>
+    <list default="true" id="a906e66a-f7ad-4c14-8e3b-4707326d7a48" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -180,8 +61,8 @@
       <file leaf-file-name="dissection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quick-netdissect/netdissect/dissection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4980">
-              <caret line="340" column="47" lean-forward="false" selection-start-line="340" selection-start-column="47" selection-end-line="340" selection-end-column="47" />
+            <state relative-caret-position="135">
+              <caret line="319" column="73" lean-forward="true" selection-start-line="319" selection-start-column="73" selection-end-line="319" selection-end-column="73" />
               <folding>
                 <marker date="1554923952315" expanded="true" signature="2053:2414" ph="..." />
               </folding>
@@ -240,6 +121,7 @@
       <find>segloader</find>
       <find>broden_label_and_category_names</find>
       <find>generate_images</find>
+      <find>&lt;&lt;&lt;&lt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -387,16 +269,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="23" width="1850" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24931657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32780612" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32780612" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -404,7 +286,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -676,14 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dissect_MNIST.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -701,11 +574,19 @@
     <entry file="file://$PROJECT_DIR$/MNIST_LUCY.py" />
     <entry file="file://$PROJECT_DIR$/quick-netdissect/netdissect/dissection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4980">
-          <caret line="340" column="47" lean-forward="false" selection-start-line="340" selection-start-column="47" selection-end-line="340" selection-end-column="47" />
+        <state relative-caret-position="135">
+          <caret line="319" column="73" lean-forward="true" selection-start-line="319" selection-start-column="73" selection-end-line="319" selection-end-column="73" />
           <folding>
             <marker date="1554923952315" expanded="true" signature="2053:2414" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
