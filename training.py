@@ -108,7 +108,7 @@ class Trainer():
         # Return gradient penalty
         return self.gp_weight * ((gradients_norm - 1) ** 2).mean()
 
-    def _train_epoch(self, data_loader, jupyter_notebook):
+    def _train_epoch(self, data_loader):
         for i, data in enumerate(data_loader):
             self.num_steps += 1
             self._critic_train_iteration(data[0])
@@ -117,30 +117,10 @@ class Trainer():
                 self._generator_train_iteration(data[0])
 
             if i % self.print_every == 0:
-                display.clear_output(True)
+                pass
+                #display.clear_output(True)
 
-                if jupyter_notebook:
-                    # Fix latents to see how image generation improves during training
-                    fixed_latents = Variable(self.G.sample_latent(64))
-                    if self.use_cuda:
-                        fixed_latents = fixed_latents.cuda()
-                    # Generate batch of images and convert to grid
-                    img_grid = make_grid(self.G(fixed_latents).cpu().data)
-                    # Convert to numpy and transpose axes to fit imageio convention
-                    # i.e. (width, height, channels)
-                    img_grid = np.transpose(img_grid.numpy(), (1, 2, 0))
 
-                    display.clear_output(True)
-                    plt.figure(figsize=(10,10))
-                    plt.imshow(img_grid)
-                    plt.show()
-
-                print("Iteration {}".format(i + 1))
-                print("D: {}".format(self.losses['D'][-1]))
-                print("GP: {}".format(self.losses['GP'][-1]))
-                print("Gradient norm: {}".format(self.losses['gradient_norm'][-1]))
-                if self.num_steps > self.critic_iterations:
-                    print("G: {}".format(self.losses['G'][-1]))
 
     def train(self, data_loader, epochs, save_training_gif=False, jupyter_notebook = False, save_model = True):
         if save_training_gif:
@@ -163,7 +143,28 @@ class Trainer():
         for epoch in range(epochs):
             print("\nEpoch {}".format(epoch + 1))
 
-            self._train_epoch(data_loader, jupyter_notebook)
+            self._train_epoch(data_loader)
+
+            if jupyter_notebook:
+                # Fix latents to see how image generation improves during training
+                fixed_latents = Variable(self.G.sample_latent(64))
+                if self.use_cuda:
+                    fixed_latents = fixed_latents.cuda()
+                # Generate batch of images and convert to grid
+                img_grid = make_grid(self.G(fixed_latents).cpu().data)
+                # Convert to numpy and transpose axes to fit imageio convention
+                # i.e. (width, height, channels)
+                img_grid = np.transpose(img_grid.numpy(), (1, 2, 0))
+
+                display.clear_output(True)
+                plt.figure(figsize=(10, 10))
+                plt.imshow(img_grid)
+                plt.show()
+
+                print("Epoch {}".format(epoch + 1))
+                print("D: {}".format(self.losses['D'][-1]))
+                print("GP: {}".format(self.losses['GP'][-1]))
+                print("Gradient norm: {}".format(self.losses['gradient_norm'][-1]))
 
             if save_training_gif:
                 # Generate batch of images and convert to grid
