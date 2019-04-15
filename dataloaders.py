@@ -20,7 +20,7 @@ def get_mnist_dataloaders(batch_size=128):
     return train_loader, test_loader
 
 
-def get_multi_mnist_dataloaders(batch_size=128):
+def get_multi_mnist_dataloaders(path, batch_size=128):
     # Resize images so they are a power of 2
     all_transforms = transforms.Compose([
         transforms.ToPILImage(),
@@ -28,8 +28,8 @@ def get_multi_mnist_dataloaders(batch_size=128):
         transforms.ToTensor()
     ])
 
-    train_data = MultiMNIST('../data/multi_mnist/MNIST_synthetic.h5',  train = True, transform = all_transforms)
-    test_data = MultiMNIST('../data/multi_mnist/MNIST_synthetic.h5', train = False, transform = all_transforms)
+    train_data = MultiMNIST(path + 'MNIST_synthetic.h5',  train = True, transform = all_transforms)
+    test_data = MultiMNIST(path + 'MNIST_synthetic.h5', train = False, transform = all_transforms)
 
     # Create dataloaders
     train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True)
