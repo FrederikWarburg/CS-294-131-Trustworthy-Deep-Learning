@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a906e66a-f7ad-4c14-8e3b-4707326d7a48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/WGAN-Test.ipynb" afterPath="$PROJECT_DIR$/WGAN-Test.ipynb" />
       <change beforePath="$PROJECT_DIR$/WGAN-Train.ipynb" afterPath="$PROJECT_DIR$/WGAN-Train.ipynb" />
+      <change beforePath="$PROJECT_DIR$/dataloaders.py" afterPath="$PROJECT_DIR$/dataloaders.py" />
+      <change beforePath="$PROJECT_DIR$/training.py" afterPath="$PROJECT_DIR$/training.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,7 +53,7 @@
       <file leaf-file-name="dissect_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quick-netdissect/dissect_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="0">
               <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
@@ -95,24 +95,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="training.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="training.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/training.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="116" column="49" lean-forward="false" selection-start-line="116" selection-start-column="49" selection-end-line="116" selection-end-column="49" />
+            <state relative-caret-position="355">
+              <caret line="133" column="45" lean-forward="false" selection-start-line="133" selection-start-column="45" selection-end-line="133" selection-end-column="45" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MNIST_LUCY.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MNIST_LUCY.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -130,8 +118,8 @@
       <file leaf-file-name="dataloaders.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataloaders.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="154">
+              <caret line="45" column="15" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="15" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -172,8 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dataset</find>
-      <find>generate_images</find>
       <find>&lt;&lt;&lt;&lt;</find>
       <find>sampler</find>
       <find>HEad</find>
@@ -198,10 +184,12 @@
       <find>get_multi_mnist_dataloaders</find>
       <find>Generator</find>
       <find>class Generator</find>
-      <find>Dataset</find>
       <find>Variable</find>
+      <find>Dataset</find>
       <find>def get_multi_mnist_dataloaders</find>
       <find>data_loader</find>
+      <find>def train</find>
+      <find>train</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -216,6 +204,7 @@
         <option value="$PROJECT_DIR$/quick-netdissect/netdissect/dissection.py" />
         <option value="$PROJECT_DIR$/quick-netdissect/netdissect/segviz.py" />
         <option value="$PROJECT_DIR$/dataloaders.py" />
+        <option value="$PROJECT_DIR$/training.py" />
       </list>
     </option>
   </component>
@@ -595,7 +584,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/quick-netdissect/dissect_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="0">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
@@ -609,16 +598,6 @@
           <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataloaders.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -653,21 +632,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="116" column="49" lean-forward="false" selection-start-line="116" selection-start-column="49" selection-end-line="116" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MNIST_LUCY.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataloaders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="45" column="15" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="15" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="133" column="45" lean-forward="false" selection-start-line="133" selection-start-column="45" selection-end-line="133" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>

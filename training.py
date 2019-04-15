@@ -131,6 +131,7 @@ class Trainer():
                     img_grid = np.transpose(img_grid.numpy(), (1, 2, 0))
 
                     display.clear_output(True)
+                    plt.figure(figsize=(10,10))
                     plt.imshow(img_grid)
                     plt.show()
 

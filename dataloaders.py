@@ -28,8 +28,8 @@ def get_multi_mnist_dataloaders(path, batch_size=128):
         transforms.ToTensor()
     ])
 
-    train_data = MultiMNIST(path + 'MNIST_synthetic.h5',  train = True, transform = all_transforms)
-    test_data = MultiMNIST(path + 'MNIST_synthetic.h5', train = False, transform = all_transforms)
+    train_data = MultiMNIST(path,  train = True, transform = all_transforms)
+    test_data = MultiMNIST(path, train = False, transform = all_transforms)
 
     # Create dataloaders
     train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True)
