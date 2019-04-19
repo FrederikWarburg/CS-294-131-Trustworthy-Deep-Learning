@@ -174,7 +174,14 @@ class Generator_6layers(nn.Module):
         self.feature_sizes = int(self.img_size[0] / 64), int(self.img_size[1] / 64)
 
         self.latent_to_features = nn.Sequential(
-            nn.Linear(latent_dim, 32 * dim * self.feature_sizes[0] * self.feature_sizes[1]),
+            nn.Linear(latent_dim,
+                      8 * dim * self.feature_sizes[0] * self.feature_sizes[1]),
+            nn.ReLU(),
+            nn.Linear(8 * dim * self.feature_sizes[0] * self.feature_sizes[1],
+                      16 * dim * self.feature_sizes[0] * self.feature_sizes[1]),
+            nn.ReLU(),
+            nn.Linear(16 * dim * self.feature_sizes[0] * self.feature_sizes[1],
+                      32 * dim * self.feature_sizes[0] * self.feature_sizes[1]),
             nn.ReLU()
         )
 
@@ -240,7 +247,11 @@ class Discriminator_6layers(nn.Module):
         # So output size will be 8 * (img_size / 2 ^ 4) * (img_size / 2 ^ 4)
         output_size = int(32 * dim * (img_size[0] / 64) * (img_size[1] / 64))
         self.features_to_prob = nn.Sequential(
-            nn.Linear(output_size, 1),
+            nn.Linear(output_size, output_size//2),
+            nn.ReLU(),
+            nn.Linear(output_size//2, output_size//4),
+            nn.ReLU(),
+            nn.Linear(output_size//4, 1),
             nn.Sigmoid()
         )
 

@@ -117,11 +117,26 @@ class Trainer():
                 self._generator_train_iteration(data[0])
 
             if i % self.print_every == 0:
+                display.clear_output(True)
+                # Fix latents to see how image generation improves during training
+                fixed_latents = Variable(self.G.sample_latent(64))
+                if self.use_cuda:
+                    fixed_latents = fixed_latents.cuda()
+                # Generate batch of images and convert to grid
+                img_grid = make_grid(self.G(fixed_latents).cpu().data)
+                # Convert to numpy and transpose axes to fit imageio convention
+                # i.e. (width, height, channels)
+                img_grid = np.transpose(img_grid.numpy(), (1, 2, 0))
 
+                display.clear_output(True)
+                plt.figure(figsize=(10, 10))
+                plt.imshow(img_grid)
+                plt.show()
                 print("D: {}".format(self.losses['D'][-1]))
                 print("GP: {}".format(self.losses['GP'][-1]))
                 print("Gradient norm: {}".format(self.losses['gradient_norm'][-1]))
-                display.clear_output(True)
+
+
 
 
 
