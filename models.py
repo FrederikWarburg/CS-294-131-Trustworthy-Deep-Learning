@@ -85,7 +85,7 @@ class Discriminator(nn.Module):
 
 class Generator_5layers(nn.Module):
     def __init__(self, img_size, latent_dim, dim):
-        super(Generator, self).__init__()
+        super(Generator_5layers, self).__init__()
 
         self.dim = dim
         self.latent_dim = latent_dim
@@ -133,7 +133,7 @@ class Discriminator_5layers(nn.Module):
             (64, 128, 3). Last number indicates number of channels, e.g. 1 for
             grayscale or 3 for RGB
         """
-        super(Discriminator, self).__init__()
+        super(Discriminator_5layers, self).__init__()
 
         self.img_size = img_size
 
