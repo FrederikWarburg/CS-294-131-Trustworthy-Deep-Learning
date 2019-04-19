@@ -2,11 +2,11 @@ from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 import h5py
 
-def get_mnist_dataloaders(batch_size=128):
+def get_mnist_dataloaders(image_size, batch_size=128):
     """MNIST dataloader with (32, 32) sized images."""
     # Resize images so they are a power of 2
     all_transforms = transforms.Compose([
-        transforms.Resize(32),
+        transforms.Resize(image_size),
         transforms.ToTensor()
     ])
     # Get train and test data
@@ -20,11 +20,11 @@ def get_mnist_dataloaders(batch_size=128):
     return train_loader, test_loader
 
 
-def get_multi_mnist_dataloaders(path, batch_size=128):
+def get_multi_mnist_dataloaders(path,image_size=64, batch_size=128):
     # Resize images so they are a power of 2
     all_transforms = transforms.Compose([
         transforms.ToPILImage(),
-        transforms.Resize(32),
+        transforms.Resize(image_size),
         transforms.ToTensor()
     ])
 

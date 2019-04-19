@@ -117,8 +117,11 @@ class Trainer():
                 self._generator_train_iteration(data[0])
 
             if i % self.print_every == 0:
-                pass
-                #display.clear_output(True)
+
+                print("D: {}".format(self.losses['D'][-1]))
+                print("GP: {}".format(self.losses['GP'][-1]))
+                print("Gradient norm: {}".format(self.losses['gradient_norm'][-1]))
+                display.clear_output(True)
 
 
 
