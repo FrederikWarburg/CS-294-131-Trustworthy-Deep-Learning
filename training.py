@@ -195,10 +195,15 @@ class Trainer():
 
             if save_model:
                 # Save models
-
                 name = 'mnist_model'
                 torch.save(self.G, 'mnist_models/' + today + '/gen_' + name + '_epoch_' + str(epoch) + '.pt')
                 torch.save(self.D, 'mnist_models/' + today + '/dis_' + name + '_epoch_' + str(epoch) + '.pt')
+
+                colab = True
+                if colab:
+                    from google.colab import files
+                    files.download('mnist_models/' + today + '/gen_' + name + '_epoch_' + str(epoch) + '.pt')
+                    files.download('mnist_models/' + today + '/dis_' + name + '_epoch_' + str(epoch) + '.pt')
 
         if save_training_gif:
             imageio.mimsave('./training_{}_epochs.gif'.format(epochs),
