@@ -3,7 +3,7 @@ __pycache__/
 runs/
 data/
 .idea/
-
+results/
 MNIST_synthetic.h5
 colab_WGAN-GP_training.ipynb
 dis_mnist_model_epoch_200.pt
