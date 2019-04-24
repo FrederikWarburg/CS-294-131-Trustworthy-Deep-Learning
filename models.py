@@ -93,8 +93,12 @@ class Generator_5layers(nn.Module):
         self.feature_sizes = int(self.img_size[0] / 32), int(self.img_size[1] / 32)
 
         self.latent_to_features = nn.Sequential(
-            nn.Linear(latent_dim, 16 * dim * self.feature_sizes[0] * self.feature_sizes[1]),
-            nn.ReLU()
+            nn.Linear(latent_dim, 4 * dim * self.feature_sizes[0] * self.feature_sizes[1]),
+            nn.ReLU(),
+            nn.Linear(4 * dim * self.feature_sizes[0] * self.feature_sizes[1], 8 * dim * self.feature_sizes[0] * self.feature_sizes[1]),
+            nn.ReLU(),
+            nn.Linear(8 * dim * self.feature_sizes[0] * self.feature_sizes[1], 16 * dim * self.feature_sizes[0] * self.feature_sizes[1]),
+            nn.ReLU(),
         )
 
         self.features_to_image = nn.Sequential(
@@ -154,7 +158,11 @@ class Discriminator_5layers(nn.Module):
         # So output size will be 8 * (img_size / 2 ^ 4) * (img_size / 2 ^ 4)
         output_size = int(16 * dim * (img_size[0] / 32) * (img_size[1] / 32))
         self.features_to_prob = nn.Sequential(
-            nn.Linear(output_size, 1),
+            nn.Linear(output_size, output_size//2),
+            nn.ReLU(),
+            nn.Linear(output_size//2, output_size//4),
+            nn.ReLU(),
+            nn.Linear(output_size//4, 1),
             nn.Sigmoid()
         )
 
