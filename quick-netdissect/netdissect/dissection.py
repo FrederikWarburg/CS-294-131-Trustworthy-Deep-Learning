@@ -62,8 +62,6 @@ def dissect(outdir, model, dataset,
     '''
     assert not model.training, 'Run model.eval() before dissection'
 
-
-
     if netname is None:
         netname = type(model).__name__
     with torch.no_grad():

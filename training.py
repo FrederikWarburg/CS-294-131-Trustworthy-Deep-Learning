@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import os
 from datetime import date
 
+
 class Trainer():
     def __init__(self, generator, discriminator, gen_optimizer, dis_optimizer,
                  gp_weight=10, critic_iterations=5, print_every=50,

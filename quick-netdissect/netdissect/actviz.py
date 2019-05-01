@@ -84,6 +84,7 @@ def activation_surface(data, target_shape=None, source_shape=None,
                 for o, ss, ts in zip(offset, source_shape, target_shape))
     # Pad the edge with zeros for sensible edge behavior
     if pad:
+        print(data.dtype)
         zeropad = numpy.zeros(
                 (data.shape[0] + 2, data.shape[1] + 2), dtype=data.dtype)
         zeropad[1:-1, 1:-1] = data

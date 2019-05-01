@@ -15,12 +15,10 @@ class Generator(nn.Module):
         self.latent_dim = latent_dim
         self.img_size = img_size
         self.feature_sizes = int(self.img_size[0] / 16), int(self.img_size[1] / 16)
-
         self.latent_to_features = nn.Sequential(
             nn.Linear(latent_dim, 8 * dim * self.feature_sizes[0] * self.feature_sizes[1]),
             nn.ReLU()
         )
-
         self.features_to_image = nn.Sequential(
             nn.ConvTranspose2d(8 * dim, 4 * dim, 4, 2, 1),
             nn.ReLU(),
@@ -41,7 +39,15 @@ class Generator(nn.Module):
         # Reshape
         x = x.view(-1, 8 * self.dim, self.feature_sizes[0], self.feature_sizes[1])
         # Return generated image
-        return self.features_to_image(x)
+        result = self.features_to_image(x)
+        # print("something more")
+
+        latent_layers = []
+
+        for layer in self.features_to_image:
+            x = layer(x)
+            latent_layers.append(x)
+        return result, latent_layers
 
     def sample_latent(self, num_samples):
         return torch.randn((num_samples, self.latent_dim))
