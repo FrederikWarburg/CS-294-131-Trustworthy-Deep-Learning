@@ -97,7 +97,7 @@ class BBOX_NET(nn.Module):
          )
 
     def forward(self, labels, transf_matr_inv, num_digits):
-        label_layout = torch.FloatTensor(labels.shape[0], 10, 16, 16).fill_(0)
+        label_layout = torchc.FloatTensor(labels.shape[0], 10, 16, 16).fill_(0)
         for idx in range(num_digits):
             current_label = labels[:, idx]
             current_label = current_label.view(current_label.shape[0], current_label.shape[1], 1, 1)
